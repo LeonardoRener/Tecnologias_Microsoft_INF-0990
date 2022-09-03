@@ -24,13 +24,34 @@ public class Robot : Item
 
     public void Move(Direction direction)
     {
-        Coordinate newCoordinate = new Coordinate(1,1);
+        Coordinate newCoordinate;
+
+        switch (direction)
+        {
+            case Direction.North:
+                newCoordinate = new Coordinate(coordinate.getX(),coordinate.getY()+1);
+                break;
+            case Direction.South:
+                newCoordinate = new Coordinate(coordinate.getX(),coordinate.getY()-1);
+                break;
+            case Direction.East:
+                newCoordinate = new Coordinate(coordinate.getX()+1,coordinate.getY());
+                break;
+            case Direction.West:
+            default:
+                newCoordinate = new Coordinate(coordinate.getX()-1,coordinate.getY());
+                break;
+        }
+        
         map?.UpdatePlayerPosition(newCoordinate);
     }
 
     public void Collect()
     {
+        List<Jawel>? collected = map?.CollectJawel(this.coordinate);
 
+        if(collected != null && collected.Count > 0)
+            this.bag.AddRange(collected);
     }
 
     public void PrintState()

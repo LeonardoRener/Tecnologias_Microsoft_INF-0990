@@ -10,6 +10,7 @@ public class Map
         this.items = new Item[sizeX,sizeY];
         this.sizeX = sizeX;
         this.sizeY = sizeY;
+        this.items[robot.GetCoordinate().getX(),robot.GetCoordinate().getY()] = robot;
         this.robot = robot;
     }
 
@@ -42,11 +43,14 @@ public class Map
         int new_x = newCoordinate.getX();
         int new_y = newCoordinate.getY();
 
-        if (this.items[new_x,new_y] == null)
+        if ((new_x > 0 && new_x < sizeX) && (new_y > 0 && new_y < sizeY))
         {
-            this.items[new_x,new_y] = this.robot;
-            this.items[old_x,old_y] = null;
-            robot.setCoordinate(newCoordinate);
+            if (this.items[new_x,new_y] == null)
+            {
+                this.items[new_x,new_y] = this.robot;
+                this.items[old_x,old_y] = null;
+                robot.setCoordinate(newCoordinate);
+            }
         }
     }
 
