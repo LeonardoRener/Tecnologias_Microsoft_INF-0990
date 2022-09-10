@@ -5,11 +5,12 @@ public class Robot : Item
     private List<Jawel> bag;
     private Map? map;
 
-    public Robot(Coordinate coordinate)
+    public Robot(Coordinate coordinate, Keyboard keyboard)
     {
         this.coordinate = coordinate;
         this.stringMap = "ME";
         bag = new List<Jawel>();
+        keyboard.keyMovePress += Move;
     }
 
     public void setMap(Map map)
@@ -22,11 +23,13 @@ public class Robot : Item
         this.coordinate = newCoordinate;
     }
 
-    public void Move(Direction direction)
+    public void Move(object sender, KeyMoveArgs e)
     {
         Coordinate newCoordinate;
 
-        switch (direction)
+        System.Console.WriteLine("Chamou o Move - {0}\n", e.direction);
+
+        switch (e.direction)
         {
             case Direction.North:
                 newCoordinate = new Coordinate(coordinate.getX()-1,coordinate.getY());
@@ -44,6 +47,8 @@ public class Robot : Item
         }
         
         map?.UpdatePlayerPosition(newCoordinate);
+        map?.PrintMap();
+        PrintState();
     }
 
     public void Collect()

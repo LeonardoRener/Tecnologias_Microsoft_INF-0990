@@ -2,13 +2,20 @@
 
   public static void Main() {
 
-      Robot robot = new Robot(new Coordinate(0,0));
+      Keyboard keyboard = new Keyboard();
+
+      Robot robot = new Robot(new Coordinate(0,0), keyboard);
       Map map = createMap(robot);
       robot.setMap(map);
-  
-      bool running = true;
-  
-      do {
+
+      map.PrintMap();
+      robot.PrintState();
+
+      keyboard.Game();
+        
+      //bool running = true;
+
+      /*do {
         map.PrintMap();
         robot.PrintState();
 
@@ -32,8 +39,10 @@
             }
         }
 
-      } while (running);
+      } while (running);*/
   }
+
+
 
   private static Map createMap(Robot robot)
   {
