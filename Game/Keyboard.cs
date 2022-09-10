@@ -1,6 +1,14 @@
 public class Keyboard
 {
+    /// <summary>
+    /// Evento para o preciosamento das teclas w, a, s, d.
+    /// </summary>
     public event EventHandler<KeyMoveArgs> keyMovePress;
+
+    /// <summary>
+    /// Evento para o precionamento da tecla g.
+    /// </summary>
+    public event EventHandler keyCollectPress;
 
     protected virtual void OnKeyMovePress(KeyMoveArgs e)
     {
@@ -11,28 +19,42 @@ public class Keyboard
         }
     }
 
+    protected virtual void OnKeyCollectPress(EventArgs e)
+    {
+        EventHandler handler = keyCollectPress;
+        if (handler != null)
+        {
+            handler(this, e);
+        }
+    }
+
     public void Game()
     {
-        bool running = true;
+        ConsoleKeyInfo cki;
 
         do {
-            char? command = Console.ReadKey(true).KeyChar;
+            cki = Console.ReadKey(true);
 
-            if (command.Equals("quit")) {
-                running = false;
-            } else if (command.Equals('w')) {
-                OnKeyMovePress(new KeyMoveArgs(Direction.North));
-            } else if (command.Equals('a')) {
-                OnKeyMovePress(new KeyMoveArgs(Direction.West));
-            } else if (command.Equals('s')) {
-                OnKeyMovePress(new KeyMoveArgs(Direction.South));
-            } else if (command.Equals('d')) {
-                OnKeyMovePress(new KeyMoveArgs(Direction.East));
-            } else if (command.Equals('g')) {
-                
+            switch (cki.Key)
+            {
+                case ConsoleKey.W:
+                    OnKeyMovePress(new KeyMoveArgs(Direction.North));
+                    break;
+                case ConsoleKey.A:
+                    OnKeyMovePress(new KeyMoveArgs(Direction.West));
+                    break;
+                case ConsoleKey.S:
+                    OnKeyMovePress(new KeyMoveArgs(Direction.South));
+                    break;
+                case ConsoleKey.D:
+                    OnKeyMovePress(new KeyMoveArgs(Direction.East));
+                    break;
+                case ConsoleKey.G:
+                    OnKeyCollectPress(EventArgs.Empty);
+                    break;
             }
 
-        } while (running);
+        } while (cki.Key != ConsoleKey.Escape);
     }
 }
 

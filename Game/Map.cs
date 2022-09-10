@@ -36,14 +36,22 @@ public class Map
         this.items[x,y] = item;
     }
 
-    public void UpdatePlayerPosition(Coordinate newCoordinate)
+    public void UpdateRobotPosition(Coordinate newCoordinate)
     {
         int old_x = robot.GetCoordinate().getX();
         int old_y = robot.GetCoordinate().getY();
         int new_x = newCoordinate.getX();
         int new_y = newCoordinate.getY();
 
-        if (IsValidPosition(new_x, new_y) && this.items[new_x,new_y] == null)
+        if (!IsValidPosition(new_x, new_y))
+        {
+            throw new Exception("");
+        }
+        else if (this.items[new_x,new_y] != null)
+        {
+            throw new Exception("");
+        }
+        else
         {
             this.items[new_x,new_y] = this.robot;
             this.items[old_x,old_y] = null;

@@ -4,13 +4,19 @@ public class Robot : Item
     private String stringMap;
     private List<Jawel> bag;
     private Map? map;
+    private String commandException;
 
     public Robot(Coordinate coordinate, Keyboard keyboard)
     {
+        // Inicializa variaveis privadas.
         this.coordinate = coordinate;
         this.stringMap = "ME";
-        bag = new List<Jawel>();
+        this.bag = new List<Jawel>();
+        this.commandException = String.Empty;
+
+        // Inscrição em eventos.
         keyboard.keyMovePress += Move;
+        keyboard.keyCollectPress += Collect;
     }
 
     public void setMap(Map map)
@@ -23,13 +29,11 @@ public class Robot : Item
         this.coordinate = newCoordinate;
     }
 
-    public void Move(object sender, KeyMoveArgs e)
+    public void Move(object? sender, KeyMoveArgs args)
     {
         Coordinate newCoordinate;
 
-        System.Console.WriteLine("Chamou o Move - {0}\n", e.direction);
-
-        switch (e.direction)
+        switch (args.direction)
         {
             case Direction.North:
                 newCoordinate = new Coordinate(coordinate.getX()-1,coordinate.getY());
@@ -46,17 +50,28 @@ public class Robot : Item
                 break;
         }
         
-        map?.UpdatePlayerPosition(newCoordinate);
+        try
+        {
+            map?.UpdateRobotPosition(newCoordinate);
+            commandException = String.Empty;
+        } catch (Exception ex)
+        {
+            commandException = ex.ToString();
+        }
+        
         map?.PrintMap();
         PrintState();
     }
 
-    public void Collect()
+    public void Collect(object? sender, EventArgs e)
     {
         List<Jawel>? collected = map?.CollectJawel();
 
         if(collected != null && collected.Count > 0)
             this.bag.AddRange(collected);
+        
+        map?.PrintMap();
+        PrintState();
     }
 
     public void PrintState()
@@ -65,6 +80,9 @@ public class Robot : Item
         foreach (Jawel jawel in bag) {
             value += jawel.getValue();
         }
+
+        if (!String.IsNullOrEmpty(this.commandException))
+            System.Console.WriteLine("Command output: {0}", this.commandException);
 
         System.Console.WriteLine("Bag total items: {0} | Bag total value: {1}", bag.Count, value);
     }
