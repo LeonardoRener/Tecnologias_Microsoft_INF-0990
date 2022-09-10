@@ -19,24 +19,17 @@ public class Coordinate
         return this.pos_y;
     }
 
-    public bool IsAdjacentPosition(Coordinate coordinate)
+    public override bool Equals(Object? obj)
     {
-        bool result = false;
+        if (obj is Coordinate coord)
+            if (this.pos_x == coord.getX() && this.pos_y == coord.getY())
+                return true;
 
-        if (coordinate.Compare(this.pos_x+1, this.pos_y))
-            result = true;
-        else if (coordinate.Compare(this.pos_x, this.pos_y+1))
-            result = true;
-        else if (coordinate.Compare(this.pos_x-1, this.pos_y))
-            result = true;
-        else if (coordinate.Compare(this.pos_x, this.pos_y-1))
-            result = true;
-
-        return result;
+        return false;
     }
 
-    private bool Compare(int x, int y)
+    public override int GetHashCode()
     {
-        return this.pos_x == x && this.pos_y == y;
+        return (this.pos_x << 2) ^ this.pos_y;
     }
 }

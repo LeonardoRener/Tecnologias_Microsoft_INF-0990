@@ -45,6 +45,20 @@
     map.AddItem(new Jawel(new Coordinate(3, 4), JawelType.Blue));
     map.AddItem(new Jawel(new Coordinate(2, 1), JawelType.Blue));
 
+    map.AddItem(new Obstacle(new Coordinate(5, 0), ObstacleType.Water));
+    map.AddItem(new Obstacle(new Coordinate(5, 1), ObstacleType.Water));
+    map.AddItem(new Obstacle(new Coordinate(5, 2), ObstacleType.Water));
+    map.AddItem(new Obstacle(new Coordinate(5, 3), ObstacleType.Water));
+    map.AddItem(new Obstacle(new Coordinate(5, 4), ObstacleType.Water));
+    map.AddItem(new Obstacle(new Coordinate(5, 5), ObstacleType.Water));
+    map.AddItem(new Obstacle(new Coordinate(5, 6), ObstacleType.Water));
+
+    map.AddItem(new Obstacle(new Coordinate(5, 9), ObstacleType.Tree));
+    map.AddItem(new Obstacle(new Coordinate(3, 9), ObstacleType.Tree));
+    map.AddItem(new Obstacle(new Coordinate(8, 3), ObstacleType.Tree));
+    map.AddItem(new Obstacle(new Coordinate(2, 5), ObstacleType.Tree));
+    map.AddItem(new Obstacle(new Coordinate(1, 4), ObstacleType.Tree));
+
     return map;
   }
 }

@@ -43,44 +43,46 @@ public class Map
         int new_x = newCoordinate.getX();
         int new_y = newCoordinate.getY();
 
-        if ((new_x > 0 && new_x < sizeX) && (new_y > 0 && new_y < sizeY))
+        if (IsValidPosition(new_x, new_y) && this.items[new_x,new_y] == null)
         {
-            if (this.items[new_x,new_y] == null)
-            {
-                this.items[new_x,new_y] = this.robot;
-                this.items[old_x,old_y] = null;
-                robot.setCoordinate(newCoordinate);
-            }
+            this.items[new_x,new_y] = this.robot;
+            this.items[old_x,old_y] = null;
+            robot.setCoordinate(newCoordinate);
         }
     }
 
-    public List<Jawel> CollectJawel(Coordinate coordinate)
+    public List<Jawel> CollectJawel()
     {
         List<Jawel> collected = new List<Jawel>();
-        int x = coordinate.getX();
-        int y = coordinate.getY();
+        int x = robot.GetCoordinate().getX();
+        int y = robot.GetCoordinate().getY();
 
-        if (items[x-1,y] is Jawel jawel1)
+        if (IsValidPosition(x-1, y) && items[x-1,y] is Jawel jawel1)
         {
             collected.Add(jawel1);
             items[x-1,y] = null;
         }
-        if (items[x,y-1] is Jawel jawel2)
+        if (IsValidPosition(x, y-1) && items[x,y-1] is Jawel jawel2)
         {
             collected.Add(jawel2);
             items[x,y-1] = null;
         }
-        if (items[x+1,y] is Jawel jawel3)
+        if (IsValidPosition(x+1, y) && items[x+1,y] is Jawel jawel3)
         {
             collected.Add(jawel3);
             items[x+1,y] = null;
         }
-        if (items[x,y+1] is Jawel jawel4)
+        if (IsValidPosition(x, y+1) && items[x,y+1] is Jawel jawel4)
         {
             collected.Add(jawel4);
             items[x,y+1] = null;
         }
 
         return collected;
+    }
+
+    private bool IsValidPosition(int x, int y)
+    {
+        return (x >= 0 && x < sizeX) && (y >= 0 && y < sizeY);
     }
 }

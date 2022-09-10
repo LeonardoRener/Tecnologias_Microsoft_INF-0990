@@ -25,6 +25,11 @@ public class Jawel : Item
         
     }
 
+    public int getValue()
+    {
+        return (int) type;
+    }
+
     public String getStringMap()
     {
         return this.stringMap;
