@@ -1,34 +1,48 @@
+namespace Game;
+
+using Utility;
+
+/// <summary>
+/// Classe responsavel por receber e analisar entradas do teclado.
+/// </summary>
 public class Keyboard
 {
     /// <summary>
     /// Evento para o preciosamento das teclas w, a, s, d.
     /// </summary>
-    public event EventHandler<KeyMoveArgs> keyMovePress;
+    /// <returns>Retorna a direção correspondente a tecla pressionada.</returns>
+    public event EventHandler<KeyMoveArgs>? keyMovePress;
 
     /// <summary>
     /// Evento para o precionamento da tecla g.
     /// </summary>
-    public event EventHandler keyCollectPress;
+    public event EventHandler? keyCollectPress;
+
+    /// <summary>
+    /// Evento para o precionamento da tecla ESC.
+    /// </summary>
+    public event EventHandler? keyEndGamePress;
 
     protected virtual void OnKeyMovePress(KeyMoveArgs e)
     {
-        EventHandler<KeyMoveArgs> handler = keyMovePress;
-        if (handler != null)
-        {
-            handler(this, e);
-        }
+        keyMovePress?.Invoke(this, e);
     }
 
     protected virtual void OnKeyCollectPress(EventArgs e)
     {
-        EventHandler handler = keyCollectPress;
-        if (handler != null)
-        {
-            handler(this, e);
-        }
+        keyCollectPress?.Invoke(this, e);
     }
 
-    public void Game()
+    protected virtual void OnKeyEndGamePress(EventArgs e)
+    {
+        keyEndGamePress?.Invoke(this, e);
+    }
+
+    /// <summary>
+    /// Cria um loop para receber entradas do teclado, invoca eventos em caso do pressionamento de teclas especificas.
+    /// O loop termina se a tecla ESC for pressionada.
+    /// </summary>
+    public void Start()
     {
         ConsoleKeyInfo cki;
 
@@ -55,12 +69,26 @@ public class Keyboard
             }
 
         } while (cki.Key != ConsoleKey.Escape);
+
+        OnKeyEndGamePress(EventArgs.Empty);
     }
 }
 
+/// <summary>
+/// Classe que extende EventArgs e é usada para informar a direção no evento keyMovePress.
+/// </summary>
 public class KeyMoveArgs : EventArgs
 {
+    /// <summary>
+    /// Direção do movimento.
+    /// </summary>
+    /// <value>Direção.</value>
     public Direction direction { get; set; }
+
+    /// <summary>
+    /// Construtor do argumento com direção, cria o argumento com a direção recebida.
+    /// </summary>
+    /// <param name="direction">Direção do movimento.</param>
     public KeyMoveArgs(Direction direction)
     {
         this.direction = direction;
