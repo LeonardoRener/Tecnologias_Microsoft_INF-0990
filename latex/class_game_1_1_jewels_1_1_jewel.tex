@@ -1,0 +1,100 @@
+\hypertarget{class_game_1_1_jewels_1_1_jewel}{}\doxysection{Game.\+Jewels.\+Jewel Class Reference}
+\label{class_game_1_1_jewels_1_1_jewel}\index{Game.Jewels.Jewel@{Game.Jewels.Jewel}}
+
+
+Classe abstrata responsável por representar joias presentes no mapa.   
+
+
+Inheritance diagram for Game.\+Jewels.\+Jewel\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_game_1_1_jewels_1_1_jewel}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_game_1_1_jewels_1_1_jewel_adc5ffe501c53ec99e83176646a721fb5}{Jewel}} (\mbox{\hyperlink{class_game_1_1_utility_1_1_coordinate}{Coordinate}} coordinate, string simbol, int value)
+\begin{DoxyCompactList}\small\item\em Construtor base para as joias.  \end{DoxyCompactList}\item 
+override string \mbox{\hyperlink{class_game_1_1_jewels_1_1_jewel_a8b47cb73a21e16028a528a17d531d7ad}{To\+String}} ()
+\begin{DoxyCompactList}\small\item\em Metodo para impressão no console.  \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_game_1_1_utility_1_1_coordinate}{Coordinate}} \mbox{\hyperlink{class_game_1_1_jewels_1_1_jewel_a05ee04433b66d0df6e886fb4b346849e}{Coordinate}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Coordenada da joia no mapa.  \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_game_1_1_jewels_1_1_jewel_a9f993706e32244263b243559b8f0905e}{Value}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Pontos fornecidos ao coletar a joia.  \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Classe abstrata responsável por representar joias presentes no mapa.  
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_game_1_1_jewels_1_1_jewel_adc5ffe501c53ec99e83176646a721fb5}\label{class_game_1_1_jewels_1_1_jewel_adc5ffe501c53ec99e83176646a721fb5}} 
+\index{Game.Jewels.Jewel@{Game.Jewels.Jewel}!Jewel@{Jewel}}
+\index{Jewel@{Jewel}!Game.Jewels.Jewel@{Game.Jewels.Jewel}}
+\doxysubsubsection{\texorpdfstring{Jewel()}{Jewel()}}
+{\footnotesize\ttfamily Game.\+Jewels.\+Jewel.\+Jewel (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_game_1_1_utility_1_1_coordinate}{Coordinate}}}]{coordinate,  }\item[{string}]{simbol,  }\item[{int}]{value }\end{DoxyParamCaption})}
+
+
+
+Construtor base para as joias.  
+
+
+\begin{DoxyParams}{Parameters}
+{\em coordinate} & Coordenada da joia.\\
+\hline
+{\em simbol} & Simbolo para impressão no mapa.\\
+\hline
+{\em value} & Pontos ao ser coletada pelo robo.\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_game_1_1_jewels_1_1_jewel_a8b47cb73a21e16028a528a17d531d7ad}\label{class_game_1_1_jewels_1_1_jewel_a8b47cb73a21e16028a528a17d531d7ad}} 
+\index{Game.Jewels.Jewel@{Game.Jewels.Jewel}!ToString@{ToString}}
+\index{ToString@{ToString}!Game.Jewels.Jewel@{Game.Jewels.Jewel}}
+\doxysubsubsection{\texorpdfstring{ToString()}{ToString()}}
+{\footnotesize\ttfamily override string Game.\+Jewels.\+Jewel.\+To\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Metodo para impressão no console.  
+
+\begin{DoxyReturn}{Returns}
+Retorna o simbolo da joia, em formato string.
+\end{DoxyReturn}
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_game_1_1_jewels_1_1_jewel_a05ee04433b66d0df6e886fb4b346849e}\label{class_game_1_1_jewels_1_1_jewel_a05ee04433b66d0df6e886fb4b346849e}} 
+\index{Game.Jewels.Jewel@{Game.Jewels.Jewel}!Coordinate@{Coordinate}}
+\index{Coordinate@{Coordinate}!Game.Jewels.Jewel@{Game.Jewels.Jewel}}
+\doxysubsubsection{\texorpdfstring{Coordinate}{Coordinate}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_game_1_1_utility_1_1_coordinate}{Coordinate}} Game.\+Jewels.\+Jewel.\+Coordinate\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Coordenada da joia no mapa.  
+
+Coordenada (x, y)
+
+Implements \mbox{\hyperlink{interface_game_1_1_utility_1_1_i_map_component_ae96d14296d887278ab37f89eb65761c4}{Game.\+Utility.\+IMap\+Component}}.
+
+\mbox{\Hypertarget{class_game_1_1_jewels_1_1_jewel_a9f993706e32244263b243559b8f0905e}\label{class_game_1_1_jewels_1_1_jewel_a9f993706e32244263b243559b8f0905e}} 
+\index{Game.Jewels.Jewel@{Game.Jewels.Jewel}!Value@{Value}}
+\index{Value@{Value}!Game.Jewels.Jewel@{Game.Jewels.Jewel}}
+\doxysubsubsection{\texorpdfstring{Value}{Value}}
+{\footnotesize\ttfamily int Game.\+Jewels.\+Jewel.\+Value\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Pontos fornecidos ao coletar a joia.  
+
+Inteiro
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Game/\+Jewels/Jewel.\+cs\end{DoxyCompactItemize}

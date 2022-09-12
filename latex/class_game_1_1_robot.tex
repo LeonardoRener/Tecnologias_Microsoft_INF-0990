@@ -1,0 +1,127 @@
+\hypertarget{class_game_1_1_robot}{}\doxysection{Game.\+Robot Class Reference}
+\label{class_game_1_1_robot}\index{Game.Robot@{Game.Robot}}
+
+
+Classe responsável por armazenar as informações do robô.   
+
+
+Inheritance diagram for Game.\+Robot\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_game_1_1_robot}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_game_1_1_robot_aafaed28fa7228f92f4cf1e12706e47eb}{Robot}} (\mbox{\hyperlink{class_game_1_1_utility_1_1_coordinate}{Coordinate}} coordinate, \mbox{\hyperlink{class_game_1_1_keyboard}{Keyboard}} keyboard)
+\begin{DoxyCompactList}\small\item\em Construtor da classe \mbox{\hyperlink{class_game_1_1_robot}{Robot}}, cria um novo robo na coordenada recebida. Realiza inscrições em eventos do teclado para mover e coletar itens.  \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_1_1_robot_a71b192babc528061d5cafaad105a9f0a}{set\+Map}} (\mbox{\hyperlink{class_game_1_1_map}{Map}} map)
+\begin{DoxyCompactList}\small\item\em Metodo para atribuir um novo mapa para o robo.  \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_game_1_1_robot_a6bbbb079af872112a43194f9b2f50a38}\label{class_game_1_1_robot_a6bbbb079af872112a43194f9b2f50a38}} 
+void {\bfseries Print\+State} ()
+\begin{DoxyCompactList}\small\item\em Metodo para imprimir no console o estado atual do robo. É exibida a quantidade de energia, total de itens na sacola e valor total dos itens na sacola.  \end{DoxyCompactList}\item 
+override string \mbox{\hyperlink{class_game_1_1_robot_a7ec7557e392b576948eb2fc9e881a86b}{To\+String}} ()
+\begin{DoxyCompactList}\small\item\em Metodo para impressão no console.  \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_game_1_1_robot_a5161a7f87cb54f7657c8ec85df266d95}\label{class_game_1_1_robot_a5161a7f87cb54f7657c8ec85df266d95}} 
+const int {\bfseries MIN\+\_\+\+ENERGY} = 1
+\begin{DoxyCompactList}\small\item\em Energia minima que o robo deve ter para conseguir se mover.  \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_game_1_1_robot_ae2d211a9d6d9c13167c18734fecee1ca}\label{class_game_1_1_robot_ae2d211a9d6d9c13167c18734fecee1ca}} 
+const int {\bfseries ENERGY\+\_\+\+TO\+\_\+\+MOVE} = -\/1
+\begin{DoxyCompactList}\small\item\em Custo de energia para o robo se mover 1 posição.  \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_game_1_1_robot_a43db8f0b90add23ffc87099d5d5ba079}\label{class_game_1_1_robot_a43db8f0b90add23ffc87099d5d5ba079}} 
+virtual void {\bfseries On\+No\+Energy} (Event\+Args e)
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_game_1_1_utility_1_1_coordinate}{Coordinate}} \mbox{\hyperlink{class_game_1_1_robot_a6b4b741077cc522421458b435de7a480}{Coordinate}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Coordenada do robo no mapa.  \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Events}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_game_1_1_robot_a0580d74dc2ed34ae1b60f19eb4fc55e2}\label{class_game_1_1_robot_a0580d74dc2ed34ae1b60f19eb4fc55e2}} 
+Event\+Handler? {\bfseries No\+Energy}
+\begin{DoxyCompactList}\small\item\em Evento que informa quando o robo esta sem energia.  \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Classe responsável por armazenar as informações do robô.  
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_game_1_1_robot_aafaed28fa7228f92f4cf1e12706e47eb}\label{class_game_1_1_robot_aafaed28fa7228f92f4cf1e12706e47eb}} 
+\index{Game.Robot@{Game.Robot}!Robot@{Robot}}
+\index{Robot@{Robot}!Game.Robot@{Game.Robot}}
+\doxysubsubsection{\texorpdfstring{Robot()}{Robot()}}
+{\footnotesize\ttfamily Game.\+Robot.\+Robot (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_game_1_1_utility_1_1_coordinate}{Coordinate}}}]{coordinate,  }\item[{\mbox{\hyperlink{class_game_1_1_keyboard}{Keyboard}}}]{keyboard }\end{DoxyParamCaption})}
+
+
+
+Construtor da classe \mbox{\hyperlink{class_game_1_1_robot}{Robot}}, cria um novo robo na coordenada recebida. Realiza inscrições em eventos do teclado para mover e coletar itens.  
+
+
+\begin{DoxyParams}{Parameters}
+{\em coordinate} & Coordenada inicial do robo.\\
+\hline
+{\em keyboard} & Classe que controla entradas do teclado.\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_game_1_1_robot_a71b192babc528061d5cafaad105a9f0a}\label{class_game_1_1_robot_a71b192babc528061d5cafaad105a9f0a}} 
+\index{Game.Robot@{Game.Robot}!setMap@{setMap}}
+\index{setMap@{setMap}!Game.Robot@{Game.Robot}}
+\doxysubsubsection{\texorpdfstring{setMap()}{setMap()}}
+{\footnotesize\ttfamily void Game.\+Robot.\+set\+Map (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_game_1_1_map}{Map}}}]{map }\end{DoxyParamCaption})}
+
+
+
+Metodo para atribuir um novo mapa para o robo.  
+
+
+\begin{DoxyParams}{Parameters}
+{\em map} & Mapa\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_game_1_1_robot_a7ec7557e392b576948eb2fc9e881a86b}\label{class_game_1_1_robot_a7ec7557e392b576948eb2fc9e881a86b}} 
+\index{Game.Robot@{Game.Robot}!ToString@{ToString}}
+\index{ToString@{ToString}!Game.Robot@{Game.Robot}}
+\doxysubsubsection{\texorpdfstring{ToString()}{ToString()}}
+{\footnotesize\ttfamily override string Game.\+Robot.\+To\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Metodo para impressão no console.  
+
+\begin{DoxyReturn}{Returns}
+Retorna o simbolo do robo, em formato string.
+\end{DoxyReturn}
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_game_1_1_robot_a6b4b741077cc522421458b435de7a480}\label{class_game_1_1_robot_a6b4b741077cc522421458b435de7a480}} 
+\index{Game.Robot@{Game.Robot}!Coordinate@{Coordinate}}
+\index{Coordinate@{Coordinate}!Game.Robot@{Game.Robot}}
+\doxysubsubsection{\texorpdfstring{Coordinate}{Coordinate}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_game_1_1_utility_1_1_coordinate}{Coordinate}} Game.\+Robot.\+Coordinate\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Coordenada do robo no mapa.  
+
+Coordenada (x, y)
+
+Implements \mbox{\hyperlink{interface_game_1_1_utility_1_1_i_map_component_ae96d14296d887278ab37f89eb65761c4}{Game.\+Utility.\+IMap\+Component}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Game/Robot.\+cs\end{DoxyCompactItemize}

@@ -1,0 +1,127 @@
+\hypertarget{class_game_1_1_map}{}\doxysection{Game.\+Map Class Reference}
+\label{class_game_1_1_map}\index{Game.Map@{Game.Map}}
+
+
+Classe responsável por armazenar as informações do mapa 2D e implementar métodos para adição e remoção de joias e obstáculos   
+
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_game_1_1_map_ab7bc108551315fb8394714f4c17c40b9}{Map}} (int sizeX, int sizeY, \mbox{\hyperlink{class_game_1_1_robot}{Robot}} robot)
+\begin{DoxyCompactList}\small\item\em Construtor da classe, cria a formação inicial do mapa.  \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_game_1_1_map_a6984316ef43e3a396f702e5b2980762b}\label{class_game_1_1_map_a6984316ef43e3a396f702e5b2980762b}} 
+void {\bfseries Print\+Map} ()
+\begin{DoxyCompactList}\small\item\em Imprime o mapa no console.  \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_1_1_map_a31750af64daa9e0e2c04c2fb4826dd0c}{Add\+Item}} (\mbox{\hyperlink{interface_game_1_1_utility_1_1_i_map_component}{IMap\+Component}} item)
+\begin{DoxyCompactList}\small\item\em Adiciona um item no mapa.  \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_game_1_1_map_a4fe017c3fdbf458387fd0d7ac1acae8c}{Update\+Robot\+Position}} (\mbox{\hyperlink{class_game_1_1_utility_1_1_coordinate}{Coordinate}} new\+Coordinate)
+\begin{DoxyCompactList}\small\item\em Metodo que atualiza a posição do robo no mapa e retorna o custo de energia do movimento. Retorna uma exceção caso a nova posição não seja valida ou exista um objeto intransponíveis estaja na nova posição.  \end{DoxyCompactList}\item 
+List$<$ \mbox{\hyperlink{class_game_1_1_jewels_1_1_jewel}{Jewel}} $>$ \mbox{\hyperlink{class_game_1_1_map_a89f8ba26bb630bbf4307c36d3cfbcfcd}{Collect\+Jawel}} ()
+\begin{DoxyCompactList}\small\item\em Metodo que coleta joias que estão em posição adjacente a posição do robo.  \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_game_1_1_map_aad5be2564444d2f6aa2a2aa40a47e682}{Collect\+Energy}} ()
+\begin{DoxyCompactList}\small\item\em Metodo que coleta energias que estão em posição adjacente a posição do robo.  \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_game_1_1_map_a1dbe8ffdc0ae9c0d1c209f872cd98761}\label{class_game_1_1_map_a1dbe8ffdc0ae9c0d1c209f872cd98761}} 
+virtual void {\bfseries On\+All\+Jawel\+Collected} (Event\+Args e)
+\end{DoxyCompactItemize}
+\doxysubsection*{Events}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_game_1_1_map_a4c789eb60b150ffa131b1ec115fa1ce3}\label{class_game_1_1_map_a4c789eb60b150ffa131b1ec115fa1ce3}} 
+Event\+Handler? {\bfseries All\+Jawel\+Collected}
+\begin{DoxyCompactList}\small\item\em Evento que informa quando todas as joias do mapa foram coletadas.  \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Classe responsável por armazenar as informações do mapa 2D e implementar métodos para adição e remoção de joias e obstáculos  
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_game_1_1_map_ab7bc108551315fb8394714f4c17c40b9}\label{class_game_1_1_map_ab7bc108551315fb8394714f4c17c40b9}} 
+\index{Game.Map@{Game.Map}!Map@{Map}}
+\index{Map@{Map}!Game.Map@{Game.Map}}
+\doxysubsubsection{\texorpdfstring{Map()}{Map()}}
+{\footnotesize\ttfamily Game.\+Map.\+Map (\begin{DoxyParamCaption}\item[{int}]{sizeX,  }\item[{int}]{sizeY,  }\item[{\mbox{\hyperlink{class_game_1_1_robot}{Robot}}}]{robot }\end{DoxyParamCaption})}
+
+
+
+Construtor da classe, cria a formação inicial do mapa.  
+
+
+\begin{DoxyParams}{Parameters}
+{\em sizeX} & Dimensão x do mapa\\
+\hline
+{\em sizeY} & Dimensão y do mapa\\
+\hline
+{\em robot} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_game_1_1_map_a31750af64daa9e0e2c04c2fb4826dd0c}\label{class_game_1_1_map_a31750af64daa9e0e2c04c2fb4826dd0c}} 
+\index{Game.Map@{Game.Map}!AddItem@{AddItem}}
+\index{AddItem@{AddItem}!Game.Map@{Game.Map}}
+\doxysubsubsection{\texorpdfstring{AddItem()}{AddItem()}}
+{\footnotesize\ttfamily void Game.\+Map.\+Add\+Item (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_game_1_1_utility_1_1_i_map_component}{IMap\+Component}}}]{item }\end{DoxyParamCaption})}
+
+
+
+Adiciona um item no mapa.  
+
+
+\begin{DoxyParams}{Parameters}
+{\em item} & Item que sera inserido.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_game_1_1_map_aad5be2564444d2f6aa2a2aa40a47e682}\label{class_game_1_1_map_aad5be2564444d2f6aa2a2aa40a47e682}} 
+\index{Game.Map@{Game.Map}!CollectEnergy@{CollectEnergy}}
+\index{CollectEnergy@{CollectEnergy}!Game.Map@{Game.Map}}
+\doxysubsubsection{\texorpdfstring{CollectEnergy()}{CollectEnergy()}}
+{\footnotesize\ttfamily int Game.\+Map.\+Collect\+Energy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Metodo que coleta energias que estão em posição adjacente a posição do robo.  
+
+\begin{DoxyReturn}{Returns}
+Quantidade de energia coletada.
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_game_1_1_map_a89f8ba26bb630bbf4307c36d3cfbcfcd}\label{class_game_1_1_map_a89f8ba26bb630bbf4307c36d3cfbcfcd}} 
+\index{Game.Map@{Game.Map}!CollectJawel@{CollectJawel}}
+\index{CollectJawel@{CollectJawel}!Game.Map@{Game.Map}}
+\doxysubsubsection{\texorpdfstring{CollectJawel()}{CollectJawel()}}
+{\footnotesize\ttfamily List$<$ \mbox{\hyperlink{class_game_1_1_jewels_1_1_jewel}{Jewel}} $>$ Game.\+Map.\+Collect\+Jawel (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Metodo que coleta joias que estão em posição adjacente a posição do robo.  
+
+\begin{DoxyReturn}{Returns}
+Lista de joias.
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_game_1_1_map_a4fe017c3fdbf458387fd0d7ac1acae8c}\label{class_game_1_1_map_a4fe017c3fdbf458387fd0d7ac1acae8c}} 
+\index{Game.Map@{Game.Map}!UpdateRobotPosition@{UpdateRobotPosition}}
+\index{UpdateRobotPosition@{UpdateRobotPosition}!Game.Map@{Game.Map}}
+\doxysubsubsection{\texorpdfstring{UpdateRobotPosition()}{UpdateRobotPosition()}}
+{\footnotesize\ttfamily int Game.\+Map.\+Update\+Robot\+Position (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_game_1_1_utility_1_1_coordinate}{Coordinate}}}]{new\+Coordinate }\end{DoxyParamCaption})}
+
+
+
+Metodo que atualiza a posição do robo no mapa e retorna o custo de energia do movimento. Retorna uma exceção caso a nova posição não seja valida ou exista um objeto intransponíveis estaja na nova posição.  
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Coordinate} & Nova coordenada do robo.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Custo de energia do movimento.
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Game/Map.\+cs\end{DoxyCompactItemize}
