@@ -1,0 +1,121 @@
+\hypertarget{class_game_1_1_utility_1_1_coordinate}{}\doxysection{Game.\+Utility.\+Coordinate Class Reference}
+\label{class_game_1_1_utility_1_1_coordinate}\index{Game.Utility.Coordinate@{Game.Utility.Coordinate}}
+
+
+Classe responsável por representar coordenadas de objetos 2D (X, Y) no mapa (\mbox{\hyperlink{class_game_1_1_map}{Map}}).   
+
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_game_1_1_utility_1_1_coordinate_ae6be06f77e642434828724047a4085c7}{Coordinate}} (int x, int y)
+\begin{DoxyCompactList}\small\item\em Cria uma nova coordenada na posição (x, y).  \end{DoxyCompactList}\item 
+override bool \mbox{\hyperlink{class_game_1_1_utility_1_1_coordinate_a79b808e0a1e677cbad4cd1520d4853ab}{Equals}} (Object? obj)
+\begin{DoxyCompactList}\small\item\em Compara objetos e determina se possuem a mesma coordenada.  \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_game_1_1_utility_1_1_coordinate_ab654772cb780d9d9699054234984c851}\label{class_game_1_1_utility_1_1_coordinate_ab654772cb780d9d9699054234984c851}} 
+override int {\bfseries Get\+Hash\+Code} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static List$<$ \mbox{\hyperlink{class_game_1_1_utility_1_1_coordinate}{Coordinate}} $>$ \mbox{\hyperlink{class_game_1_1_utility_1_1_coordinate_a493cca93bec9cd1af3a02b59a895decd}{Coordinate\+Map}} (int sizeX, int sizeY)
+\begin{DoxyCompactList}\small\item\em Metodo estatico que cria uma lista de coordenadas com as posições de uma mapa de tamanho sizeX por sizeY.  \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_game_1_1_utility_1_1_coordinate_abac0419a62864a23596a082f7d65c0dc}{X}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Posição X da coordenada.  \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_game_1_1_utility_1_1_coordinate_a5f2abb14953303e06eff98caf82bbd03}{Y}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Posição Y da coordenada.  \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Classe responsável por representar coordenadas de objetos 2D (X, Y) no mapa (\mbox{\hyperlink{class_game_1_1_map}{Map}}).  
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_game_1_1_utility_1_1_coordinate_ae6be06f77e642434828724047a4085c7}\label{class_game_1_1_utility_1_1_coordinate_ae6be06f77e642434828724047a4085c7}} 
+\index{Game.Utility.Coordinate@{Game.Utility.Coordinate}!Coordinate@{Coordinate}}
+\index{Coordinate@{Coordinate}!Game.Utility.Coordinate@{Game.Utility.Coordinate}}
+\doxysubsubsection{\texorpdfstring{Coordinate()}{Coordinate()}}
+{\footnotesize\ttfamily Game.\+Utility.\+Coordinate.\+Coordinate (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+
+
+Cria uma nova coordenada na posição (x, y).  
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & Coordenada X\\
+\hline
+{\em y} & Coordenada Y\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_game_1_1_utility_1_1_coordinate_a493cca93bec9cd1af3a02b59a895decd}\label{class_game_1_1_utility_1_1_coordinate_a493cca93bec9cd1af3a02b59a895decd}} 
+\index{Game.Utility.Coordinate@{Game.Utility.Coordinate}!CoordinateMap@{CoordinateMap}}
+\index{CoordinateMap@{CoordinateMap}!Game.Utility.Coordinate@{Game.Utility.Coordinate}}
+\doxysubsubsection{\texorpdfstring{CoordinateMap()}{CoordinateMap()}}
+{\footnotesize\ttfamily static List$<$ \mbox{\hyperlink{class_game_1_1_utility_1_1_coordinate}{Coordinate}} $>$ Game.\+Utility.\+Coordinate.\+Coordinate\+Map (\begin{DoxyParamCaption}\item[{int}]{sizeX,  }\item[{int}]{sizeY }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Metodo estatico que cria uma lista de coordenadas com as posições de uma mapa de tamanho sizeX por sizeY.  
+
+
+\begin{DoxyParams}{Parameters}
+{\em sizeX} & Tamanho em x.\\
+\hline
+{\em sizeY} & Tamanho em y.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Lista de coordenadas.
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_game_1_1_utility_1_1_coordinate_a79b808e0a1e677cbad4cd1520d4853ab}\label{class_game_1_1_utility_1_1_coordinate_a79b808e0a1e677cbad4cd1520d4853ab}} 
+\index{Game.Utility.Coordinate@{Game.Utility.Coordinate}!Equals@{Equals}}
+\index{Equals@{Equals}!Game.Utility.Coordinate@{Game.Utility.Coordinate}}
+\doxysubsubsection{\texorpdfstring{Equals()}{Equals()}}
+{\footnotesize\ttfamily override bool Game.\+Utility.\+Coordinate.\+Equals (\begin{DoxyParamCaption}\item[{Object?}]{obj }\end{DoxyParamCaption})}
+
+
+
+Compara objetos e determina se possuem a mesma coordenada.  
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & Objeto a ser comparado.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True se for igual e False caso contrario.
+\end{DoxyReturn}
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_game_1_1_utility_1_1_coordinate_abac0419a62864a23596a082f7d65c0dc}\label{class_game_1_1_utility_1_1_coordinate_abac0419a62864a23596a082f7d65c0dc}} 
+\index{Game.Utility.Coordinate@{Game.Utility.Coordinate}!X@{X}}
+\index{X@{X}!Game.Utility.Coordinate@{Game.Utility.Coordinate}}
+\doxysubsubsection{\texorpdfstring{X}{X}}
+{\footnotesize\ttfamily int Game.\+Utility.\+Coordinate.\+X\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Posição X da coordenada.  
+
+Valor da posição x.\mbox{\Hypertarget{class_game_1_1_utility_1_1_coordinate_a5f2abb14953303e06eff98caf82bbd03}\label{class_game_1_1_utility_1_1_coordinate_a5f2abb14953303e06eff98caf82bbd03}} 
+\index{Game.Utility.Coordinate@{Game.Utility.Coordinate}!Y@{Y}}
+\index{Y@{Y}!Game.Utility.Coordinate@{Game.Utility.Coordinate}}
+\doxysubsubsection{\texorpdfstring{Y}{Y}}
+{\footnotesize\ttfamily int Game.\+Utility.\+Coordinate.\+Y\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Posição Y da coordenada.  
+
+Valor da posição y.
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Game/\+Utility/Coordinate.\+cs\end{DoxyCompactItemize}

@@ -1,0 +1,60 @@
+\hypertarget{class_game_1_1_keyboard}{}\doxysection{Game.\+Keyboard Class Reference}
+\label{class_game_1_1_keyboard}\index{Game.Keyboard@{Game.Keyboard}}
+
+
+Classe responsável por receber e analisar entradas do teclado.   
+
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_game_1_1_keyboard_a54d5078d2b7ac799cf0a82df09ae9d4b}\label{class_game_1_1_keyboard_a54d5078d2b7ac799cf0a82df09ae9d4b}} 
+void {\bfseries Start} ()
+\begin{DoxyCompactList}\small\item\em Cria um loop para receber entradas do teclado, invoca eventos em caso do pressionamento de teclas especificas. O loop termina se a tecla ESC for pressionada.  \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_game_1_1_keyboard_a99bfc38a45428e272f714d8035855969}\label{class_game_1_1_keyboard_a99bfc38a45428e272f714d8035855969}} 
+virtual void {\bfseries On\+Key\+Move\+Press} (\mbox{\hyperlink{class_game_1_1_key_move_args}{Key\+Move\+Args}} e)
+\item 
+\mbox{\Hypertarget{class_game_1_1_keyboard_aeb85561e7321b22ec9c8e4dcae4ef741}\label{class_game_1_1_keyboard_aeb85561e7321b22ec9c8e4dcae4ef741}} 
+virtual void {\bfseries On\+Key\+Collect\+Press} (Event\+Args e)
+\item 
+\mbox{\Hypertarget{class_game_1_1_keyboard_a77132f7c3eb2f06a469bc83445bef7bc}\label{class_game_1_1_keyboard_a77132f7c3eb2f06a469bc83445bef7bc}} 
+virtual void {\bfseries On\+Key\+End\+Game\+Press} (Event\+Args e)
+\end{DoxyCompactItemize}
+\doxysubsection*{Events}
+\begin{DoxyCompactItemize}
+\item 
+Event\+Handler$<$ \mbox{\hyperlink{class_game_1_1_key_move_args}{Key\+Move\+Args}} $>$? \mbox{\hyperlink{class_game_1_1_keyboard_ae3f036706e266b1224a458b3598175e1}{key\+Move\+Press}}
+\begin{DoxyCompactList}\small\item\em Evento para o preciosamento das teclas w, a, s, d.  \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_game_1_1_keyboard_ad75212535a7a0c01d70a2359aaed41c9}\label{class_game_1_1_keyboard_ad75212535a7a0c01d70a2359aaed41c9}} 
+Event\+Handler? {\bfseries key\+Collect\+Press}
+\begin{DoxyCompactList}\small\item\em Evento para o precionamento da tecla g.  \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_game_1_1_keyboard_a24293ff6ae4bfff806382786b8257352}\label{class_game_1_1_keyboard_a24293ff6ae4bfff806382786b8257352}} 
+Event\+Handler? {\bfseries key\+End\+Game\+Press}
+\begin{DoxyCompactList}\small\item\em Evento para o precionamento da tecla ESC.  \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Classe responsável por receber e analisar entradas do teclado.  
+
+\doxysubsection{Event Documentation}
+\mbox{\Hypertarget{class_game_1_1_keyboard_ae3f036706e266b1224a458b3598175e1}\label{class_game_1_1_keyboard_ae3f036706e266b1224a458b3598175e1}} 
+\index{Game.Keyboard@{Game.Keyboard}!keyMovePress@{keyMovePress}}
+\index{keyMovePress@{keyMovePress}!Game.Keyboard@{Game.Keyboard}}
+\doxysubsubsection{\texorpdfstring{keyMovePress}{keyMovePress}}
+{\footnotesize\ttfamily Event\+Handler$<$\mbox{\hyperlink{class_game_1_1_key_move_args}{Key\+Move\+Args}}$>$? Game.\+Keyboard.\+key\+Move\+Press}
+
+
+
+Evento para o preciosamento das teclas w, a, s, d.  
+
+\begin{DoxyReturn}{Returns}
+Retorna a direção correspondente a tecla pressionada.
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Game/Keyboard.\+cs\end{DoxyCompactItemize}
