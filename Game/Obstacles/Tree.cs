@@ -1,40 +1,41 @@
-namespace Game.Obstacles;
+using Game.Utility;
 
-using Utility;
-
-/// <summary>
-/// Classe para os obstaculo do tipo Tree (Arvore).
-/// </summary>
-public class Tree : Obstacle, IRecharger
+namespace Game.Obstacles
 {
     /// <summary>
-    /// Pontos de energia fornecidos ao ser consumida.
+    /// Classe responsável por representar obstaculos do tipo Arvore.
     /// </summary>
-    /// <value>Retorna 3 na primeira vez e 0 nas chamadas posteriores.</value>
-    public int Energy 
+    public class Tree : Obstacle, IRecharger
     {
-        get
+        /// <summary>
+        /// Pontos de energia fornecidos ao ser consumida.
+        /// </summary>
+        /// <value>Retorna 3 na primeira vez e 0 nas chamadas posteriores.</value>
+        public int Energy 
         {
-            int value = energy;
-            energy = 0;
-            return value;
+            get
+            {
+                int value = energy;
+                energy = 0;
+                return value;
+            }
+            private set
+            {
+                energy = value;
+            }
         }
-        private set
+
+        // Atributos privados
+        private int energy;
+
+        /// <summary>
+        /// O construtor recebe a coordenada do obstaculo e cria um obstaculo com simbolo "$$".
+        /// A arvore fornece 3 pontos de energia ao ser consumida.
+        /// </summary>
+        /// <param name="coordinate">Coordenada da arvore.</param>
+        public Tree(Coordinate coordinate) : base(coordinate, "$$")
         {
-            energy = value;
+            this.Energy = 3;
         }
-    }
-
-    // Atributos privados
-    private int energy;
-
-    /// <summary>
-    /// O construtor recebe a coordenada do obstaculo e cria um obstaculo com simbolo "$$".
-    /// A arvore fornece 3 pontos de energia ao ser consumida.
-    /// </summary>
-    /// <param name="coordinate">Coordenada da arvore.</param>
-    public Tree(Coordinate coordinate) : base(coordinate, "$$")
-    {
-        this.Energy = 3;
     }
 }

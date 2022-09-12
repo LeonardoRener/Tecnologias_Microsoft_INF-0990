@@ -1,24 +1,25 @@
-﻿namespace Game;
+﻿using Game.Utility;
 
-using Utility;
-
-/// <summary>
-/// Classe que inicia o programa, possuindo o metodo Main.
-/// </summary>
-public class JewelCollector {
-
+namespace Game
+{
   /// <summary>
-  /// Metodo principal, inicia o jogo.
-  /// Cria instancias das classes de teclado (Keyboard), robo (Robot) e controle de nivel (LevelController).
+  /// Classe responsável por iniciar a execução programa.
   /// </summary>
-  public static void Main() {
+  public class JewelCollector {
 
-      Keyboard keyboard = new Keyboard();
+    /// <summary>
+    /// Metodo principal, inicia o jogo.
+    /// Cria instancias das classes de teclado (Keyboard), robo (Robot) e controle de nivel (LevelController).
+    /// </summary>
+    public static void Main() {
 
-      Robot robot = new Robot(new Coordinate(0,0), keyboard);
-      LevelController levelController = new LevelController(0, robot, keyboard);
+        Keyboard keyboard = new Keyboard();
 
-      levelController.Start();
+        Robot robot = new Robot(new Coordinate(0,0), keyboard);
+        LevelController levelController = new LevelController(0, robot, keyboard);
+
+        levelController.Start();
+    }
+
   }
-
 }

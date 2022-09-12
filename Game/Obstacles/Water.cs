@@ -1,18 +1,19 @@
-namespace Game.Obstacles;
+using Game.Utility;
 
-using Utility;
-
-/// <summary>
-/// Classe para os obstaculo do tipo Water (Agua).
-/// </summary>
-public class Water : Obstacle
+namespace Game.Obstacles
 {
     /// <summary>
-    /// O construtor recebe a coordenada do obstaculo e cria um obstaculo com simbolo "##".
+    /// Classe responsável por representar obstaculos do tipo Água.
     /// </summary>
-    /// <param name="coordinate">Coordenada do obstaculo.</param>
-    public Water(Coordinate coordinate) : base(coordinate, "##")
+    public class Water : Obstacle
     {
-        
+        /// <summary>
+        /// O construtor recebe a coordenada do obstaculo e cria um obstaculo com simbolo "##".
+        /// </summary>
+        /// <param name="coordinate">Coordenada do obstaculo.</param>
+        public Water(Coordinate coordinate) : base(coordinate, "##")
+        {
+            
+        }
     }
 }

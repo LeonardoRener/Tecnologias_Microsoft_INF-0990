@@ -1,13 +1,14 @@
-namespace Game.Utility;
-
-/// <summary>
-/// Interface de objetos que recarregam a energia do robo.
-/// </summary>
-public interface IRecharger
+namespace Game.Utility
 {
     /// <summary>
-    /// Energia fornecida pelo objeto.
+    /// Interface de objetos que recarregam a energia do Robot (Robô).
     /// </summary>
-    /// <value>Energia fornecida.</value>
-    int Energy { get; }
+    public interface IRecharger
+    {
+        /// <summary>
+        /// Energia fornecida pelo objeto.
+        /// </summary>
+        /// <value>Energia fornecida.</value>
+        int Energy { get; }
+    }
 }

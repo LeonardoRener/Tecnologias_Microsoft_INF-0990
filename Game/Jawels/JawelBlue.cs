@@ -1,25 +1,26 @@
-namespace Game.Jawels;
+using Game.Utility;
 
-using Utility;
-
-/// <summary>
-/// Classe para as joias do tipo Blue.
-/// </summary>
-public class JawelBlue : Jawel, IRecharger
+namespace Game.Jawels
 {
     /// <summary>
-    /// Pontos de energia fornecidos ao ser consumida.
+    /// Classe responsável por representar joias do tipo Blue.
     /// </summary>
-    /// <value>5</value>
-    public int Energy { get; private set; }
-
-    /// <summary>
-    /// O construtor recebe a coordenada da joia e cria uma joia com simbolo "JB" e com valor de 10 pontos.
-    /// A joia fornece 5 pontos de energia ao ser consumida.
-    /// </summary>
-    /// <param name="coordinate">Coordenada da joia.</param>
-    public JawelBlue(Coordinate coordinate) : base(coordinate, "JB", 10)
+    public class JawelBlue : Jawel, IRecharger
     {
-        this.Energy = 5;
+        /// <summary>
+        /// Pontos de energia fornecidos ao ser consumida.
+        /// </summary>
+        /// <value>5</value>
+        public int Energy { get; private set; }
+
+        /// <summary>
+        /// O construtor recebe a coordenada da joia e cria uma joia com simbolo "JB" e com valor de 10 pontos.
+        /// A joia fornece 5 pontos de energia ao ser consumida.
+        /// </summary>
+        /// <param name="coordinate">Coordenada da joia.</param>
+        public JawelBlue(Coordinate coordinate) : base(coordinate, "JB", 10)
+        {
+            this.Energy = 5;
+        }
     }
 }
