@@ -1,5 +1,5 @@
 using Game.Utility;
-using Game.Jawels;
+using Game.Jewels;
 
 namespace Game
 {
@@ -15,7 +15,7 @@ namespace Game
         public Coordinate Coordinate { get; private set; }
 
         // Atributos privados
-        private List<Jawel> bag;
+        private List<Jewel> bag;
         private Map? map;
         private int energy;
         private String commandException;
@@ -53,7 +53,7 @@ namespace Game
         {
             // Inicializa variaveis privadas.
             this.Coordinate = coordinate;
-            this.bag = new List<Jawel>();
+            this.bag = new List<Jewel>();
             this.energy = 5;
             this.commandException = String.Empty;
 
@@ -130,7 +130,7 @@ namespace Game
             if (map != null)
             {
                 this.energy += map.CollectEnergy();
-                List<Jawel> collected = map.CollectJawel();
+                List<Jewel> collected = map.CollectJawel();
 
                 if(collected.Count > 0)
                     this.bag.AddRange(collected);
@@ -147,8 +147,8 @@ namespace Game
         public void PrintState()
         {
             int value = 0;
-            foreach (Jawel jawel in bag) {
-                value += jawel.Value;
+            foreach (Jewel jewel in bag) {
+                value += jewel.Value;
             }
 
             if (!String.IsNullOrEmpty(this.commandException))

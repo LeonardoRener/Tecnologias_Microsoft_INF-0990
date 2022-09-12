@@ -1,7 +1,7 @@
 namespace Game.Utility
 {
   /// <summary>
-  /// Interface de objetos que podem estar no mapa (Jawel, Obstacle e Robot).
+  /// Interface de objetos que podem estar no mapa.
   /// </summary>
   public interface IMapComponent
   {

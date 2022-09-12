@@ -1,11 +1,11 @@
 using Game.Utility;
 
-namespace Game.Jawels
+namespace Game.Jewels
 {
     /// <summary>
     /// Classe responsável por representar joias do tipo Blue.
     /// </summary>
-    public class JawelBlue : Jawel, IRecharger
+    public class JewelBlue : Jewel, IRecharger
     {
         /// <summary>
         /// Pontos de energia fornecidos ao ser consumida.
@@ -18,7 +18,7 @@ namespace Game.Jawels
         /// A joia fornece 5 pontos de energia ao ser consumida.
         /// </summary>
         /// <param name="coordinate">Coordenada da joia.</param>
-        public JawelBlue(Coordinate coordinate) : base(coordinate, "JB", 10)
+        public JewelBlue(Coordinate coordinate) : base(coordinate, "JB", 10)
         {
             this.Energy = 5;
         }

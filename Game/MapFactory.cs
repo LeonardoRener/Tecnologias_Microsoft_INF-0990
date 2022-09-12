@@ -1,5 +1,5 @@
 using Game.Utility;
-using Game.Jawels;
+using Game.Jewels;
 using Game.Obstacles;
 
 namespace Game
@@ -43,15 +43,15 @@ namespace Game
 
             for (int i = 0; i < amountJawelRed; i++)
             {
-                map.AddItem(new JawelRed(coordinates.GetNewRandom(random)));
+                map.AddItem(new JewelRed(coordinates.GetNewRandom(random)));
             }
             for (int i = 0; i < amountJawelBlue; i++)
             {
-                map.AddItem(new JawelBlue(coordinates.GetNewRandom(random)));
+                map.AddItem(new JewelBlue(coordinates.GetNewRandom(random)));
             }
             for (int i = 0; i < amountJawelGree; i++)
             {
-                map.AddItem(new JawelGreen(coordinates.GetNewRandom(random)));
+                map.AddItem(new JewelGreen(coordinates.GetNewRandom(random)));
             }
 
             for (int i = 0; i < amountObstacleWater; i++)

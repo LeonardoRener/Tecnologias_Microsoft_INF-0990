@@ -1,5 +1,5 @@
 using Game.Utility;
-using Game.Jawels;
+using Game.Jewels;
 using Game.Obstacles;
 
 namespace Game
@@ -67,7 +67,7 @@ namespace Game
         {
             this.items[item.Coordinate.X, item.Coordinate.Y] = item;  
 
-            if (item is Jawel)
+            if (item is Jewel)
                 this.jawelAmount += 1;
         }
 
@@ -81,7 +81,7 @@ namespace Game
             {
                 this.items[item.Coordinate.X, item.Coordinate.Y] = null;
 
-                if (item is Jawel)
+                if (item is Jewel)
                 {
                     this.jawelAmount -= 1;
                     if (this.jawelAmount == 0)
@@ -125,30 +125,30 @@ namespace Game
         /// Metodo que coleta joias que estão em posição adjacente a posição do robo.
         /// </summary>
         /// <returns>Lista de joias.</returns>
-        public List<Jawel> CollectJawel()
+        public List<Jewel> CollectJawel()
         {
-            List<Jawel> collected = new List<Jawel>();
+            List<Jewel> collected = new List<Jewel>();
             int x = robot.Coordinate.X;
             int y = robot.Coordinate.Y;
 
-            if (IsValidPosition(x-1, y) && items[x-1,y] is Jawel jawel1)
+            if (IsValidPosition(x-1, y) && items[x-1,y] is Jewel jewel1)
             {
-                collected.Add(jawel1);
+                collected.Add(jewel1);
                 RemoveItem(items[x-1,y]);
             }
-            if (IsValidPosition(x, y-1) && items[x,y-1] is Jawel jawel2)
+            if (IsValidPosition(x, y-1) && items[x,y-1] is Jewel jewel2)
             {
-                collected.Add(jawel2);
+                collected.Add(jewel2);
                 RemoveItem(items[x,y-1]);
             }
-            if (IsValidPosition(x+1, y) && items[x+1,y] is Jawel jawel3)
+            if (IsValidPosition(x+1, y) && items[x+1,y] is Jewel jewel3)
             {
-                collected.Add(jawel3);
+                collected.Add(jewel3);
                 RemoveItem(items[x+1,y]);
             }
-            if (IsValidPosition(x, y+1) && items[x,y+1] is Jawel jawel4)
+            if (IsValidPosition(x, y+1) && items[x,y+1] is Jewel jewel4)
             {
-                collected.Add(jawel4);
+                collected.Add(jewel4);
                 RemoveItem(items[x,y+1]);
             }
 

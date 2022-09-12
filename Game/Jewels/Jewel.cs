@@ -1,11 +1,11 @@
 using Game.Utility;
 
-namespace Game.Jawels
+namespace Game.Jewels
 {
     /// <summary>
     /// Classe abstrata responsável por representar joias presentes no mapa.
     /// </summary>
-    public abstract class Jawel : IMapComponent
+    public abstract class Jewel : IMapComponent
     {
         /// <summary>
         /// Coordenada da joia no mapa.
@@ -28,7 +28,7 @@ namespace Game.Jawels
         /// <param name="coordinate">Coordenada da joia.</param>
         /// <param name="simbol">Simbolo para impressão no mapa.</param>
         /// <param name="value">Pontos ao ser coletada pelo robo.</param>
-        public Jawel(Coordinate coordinate, string simbol, int value)
+        public Jewel(Coordinate coordinate, string simbol, int value)
         {
             this.Coordinate = coordinate;
             this.simbol = simbol;
